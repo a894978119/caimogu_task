@@ -68,7 +68,6 @@ public class CaiMoGuH5Help {
             }
             hasMore = pageModel.getHasMore();
         } while (hasMore);
-        log.error(gameIds.size() + "");
         return gameIds;
     }
 
@@ -656,7 +655,6 @@ public class CaiMoGuH5Help {
 
         String signSource = sb.toString().toLowerCase();
         String sign = DigestUtils.md5Hex(signSource);
-        log.error("{}=>{}", signSource, sign);
         paramMap.put("sign", sign);
     }
 
