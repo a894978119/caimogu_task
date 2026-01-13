@@ -765,6 +765,9 @@ public class CaiMoGuH5Help {
                 aesBase64 = aesBase64.replaceFirst("\\+", "%2B");
             }
 
+            if (aesBase64.startsWith("/")) {
+                aesBase64 = aesBase64.replaceFirst("/", "%2F");
+            }
             return URLEncoder.encode(aesBase64, StandardCharsets.UTF_8.name());
 
         } catch (Exception ex) {
